@@ -17,6 +17,7 @@
 		6059A0BD1F1B6CB7001B1E68 /* GlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6059A0BC1F1B6CB7001B1E68 /* GlobalDefine.swift */; };
 		6059A0C01F1B6F9B001B1E68 /* LeakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6059A0BF1F1B6F9B001B1E68 /* LeakViewController.swift */; };
 		6059A0C21F1B7504001B1E68 /* TriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6059A0C11F1B7504001B1E68 /* TriggerView.swift */; };
+		6059A0C51F1B7ACF001B1E68 /* LeakHunter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6059A0C41F1B7ACF001B1E68 /* LeakHunter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6059A0BC1F1B6CB7001B1E68 /* GlobalDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefine.swift; sourceTree = "<group>"; };
 		6059A0BF1F1B6F9B001B1E68 /* LeakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeakViewController.swift; sourceTree = "<group>"; };
 		6059A0C11F1B7504001B1E68 /* TriggerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerView.swift; sourceTree = "<group>"; };
+		6059A0C41F1B7ACF001B1E68 /* LeakHunter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeakHunter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		6059A08D1F1B695D001B1E68 /* MemLeak */ = {
 			isa = PBXGroup;
 			children = (
+				6059A0C31F1B7AAA001B1E68 /* LeakHunter */,
 				6059A0BE1F1B6EFB001B1E68 /* Demo */,
 				6059A08E1F1B695D001B1E68 /* AppDelegate.swift */,
 				6059A0901F1B695E001B1E68 /* ViewController.swift */,
@@ -140,6 +143,14 @@
 				6059A0C11F1B7504001B1E68 /* TriggerView.swift */,
 			);
 			name = Demo;
+			sourceTree = "<group>";
+		};
+		6059A0C31F1B7AAA001B1E68 /* LeakHunter */ = {
+			isa = PBXGroup;
+			children = (
+				6059A0C41F1B7ACF001B1E68 /* LeakHunter.swift */,
+			);
+			name = LeakHunter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 				6059A0C21F1B7504001B1E68 /* TriggerView.swift in Sources */,
 				6059A0911F1B695E001B1E68 /* ViewController.swift in Sources */,
 				6059A08F1F1B695D001B1E68 /* AppDelegate.swift in Sources */,
+				6059A0C51F1B7ACF001B1E68 /* LeakHunter.swift in Sources */,
 				6059A0C01F1B6F9B001B1E68 /* LeakViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +540,7 @@
 				6059A0B51F1B6961001B1E68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6059A0B61F1B6961001B1E68 /* Build configuration list for PBXNativeTarget "MemLeakTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +549,7 @@
 				6059A0B81F1B6961001B1E68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6059A0B91F1B6961001B1E68 /* Build configuration list for PBXNativeTarget "MemLeakUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +558,7 @@
 				6059A0BB1F1B6961001B1E68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

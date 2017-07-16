@@ -9,13 +9,30 @@
 import UIKit
 
 class TriggerView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initUI()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    var tapBlock : swiftNoPatameterBlock!
+    
+    func initUI() {
+        self.backgroundColor = ColorMethodho(hexValue: 0x00c18b)
+        
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapEvent(sender:)))
+        self.addGestureRecognizer(tap)
+        
+    }
+    
+    func tapEvent(sender : UITapGestureRecognizer) {
+        
+        tapBlock()
+        
+    }
+    
 }

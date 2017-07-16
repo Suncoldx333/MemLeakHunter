@@ -9,12 +9,12 @@
 import UIKit
 
 class LeakViewController: UIViewController {
-
+    
     override func loadView() {
         
         let bgView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
         
-        initUI(view: bgView)
+        initUI(bgview: bgView)
         
         self.view = bgView
         
@@ -22,19 +22,31 @@ class LeakViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        initData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func initUI(view : UIView) {
-        view.backgroundColor = ColorMethodho(hexValue: 0x00c18b).withAlphaComponent(0.2)
+    lazy var trigger: TriggerView = {
+        let inner  = TriggerView.init(frame: CGRect.init(x: 0, y: 100, width: 100, height: 100))
         
+        return inner
+    }()
+    
+    func initUI(bgview : UIView) {
+        bgview.backgroundColor = ColorMethodho(hexValue: 0xb2b2b2)
+        bgview.addSubview(trigger)
         
     }
-
+    
+    func initData() {
+        trigger.tapBlock = {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
 }
